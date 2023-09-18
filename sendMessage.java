@@ -1,3 +1,7 @@
+package org.example.Siforovani;
+
+import org.example.Siforovani.Configuration;
+
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
@@ -28,7 +32,7 @@ public class sendMessage {
         }
         Scanner sc = new Scanner(System.in);
         KeyFactory kf = KeyFactory.getInstance("RSA");
-        String folderPath = "C:\\Users\\2020-e-franc\\Documents\\testGit\\test1";
+        String folderPath = Configuration.pathToRep;
         ArrayList<Addressee> addressees = new ArrayList<Addressee>();
 
 

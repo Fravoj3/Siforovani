@@ -1,3 +1,5 @@
+package org.example.Siforovani;
+
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
@@ -24,9 +26,9 @@ public class readAllMessages {
                 this.text = text;
             }
         }
-        String folderPath = "C:\\Users\\2020-e-franc\\Documents\\testGit\\test1";
+
+        String folderPath = Configuration.pathToRep;
         File messagesF = new File(folderPath+"\\messages");
-        ArrayList<Message> readedMessages = new ArrayList<Message>();
 
         KeyFactory kf = KeyFactory.getInstance("RSA");
         byte[] privateKeyFile = Files.readAllBytes(Paths.get("mujSoukromy.key"));
